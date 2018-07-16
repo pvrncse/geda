@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.route';
+//import { ɵROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy } from "@angular/router";
 import { ChartsModule } from 'ng2-charts';
 import {NgSelectModule, NgOption} from '@ng-select/ng-select';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';

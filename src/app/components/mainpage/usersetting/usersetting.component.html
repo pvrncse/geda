@@ -14,11 +14,11 @@
         <mat-tab label="Test Rail">
             <div class="example-container">
                 <mat-form-field>
-                    <input matInput placeholder="Enter testrail user name" [(ngModel)]="userName" />
+                    <input matInput placeholder="Enter Testrail Username" [(ngModel)]="userName" />
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="Enter test rail API key" [(ngModel)]="apiKey" />
+                    <input matInput placeholder="Enter Testrail API Key" [(ngModel)]="apiKey" />
                 </mat-form-field>
                 <mat-grid-list cols="2" rowHeight="5:1">
                     <mat-grid-tile><button mat-button (click)="clearFields()">Cancel</button></mat-grid-tile>
@@ -29,11 +29,11 @@
         <mat-tab label="Jira" (click)="testFun()">
             <div class="example-container">
                 <mat-form-field>
-                    <input matInput placeholder="Enter access token" [(ngModel)]="accessToken" />
+                    <input matInput placeholder="Access Token" [(ngModel)]="accessToken" />
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="Enter request token" [(ngModel)]="requestToken" />
+                    <input matInput placeholder="Request Token" [(ngModel)]="requestToken" />
                 </mat-form-field>
                 <mat-grid-list cols="2" rowHeight="5:1">
                     <mat-grid-tile>&nbsp;</mat-grid-tile>
@@ -44,15 +44,15 @@
         <mat-tab label="Preferences">
             <div class="example-container">
                 <mat-form-field>
-                    <input matInput placeholder="Enter password" [(ngModel)]="oldPassword" />
+                    <input matInput placeholder="Enter Password" [(ngModel)]="oldPassword" />
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="Enter new password" [(ngModel)]="newPassword" />
+                    <input matInput placeholder="Enter New Password" [(ngModel)]="newPassword" />
                 </mat-form-field>
 
                 <mat-form-field>
-                    <input matInput placeholder="Confirm new password" [(ngModel)]="confirmNewPassword" />
+                    <input matInput placeholder="Confirm New Password" [(ngModel)]="confirmNewPassword" />
                 </mat-form-field>
                 <mat-grid-list cols="2" rowHeight="5:1">
                     <mat-grid-tile>&nbsp;</mat-grid-tile>

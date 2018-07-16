@@ -70,8 +70,8 @@ export class DeviceComponent {
 
   openDialog(){
     let dialogRef = this.dialog.open(DeviceComponentDialog, {
-      height: '380px',
-      width: '400px',
+      height: '400px',
+      width: '420px',
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -59,7 +59,7 @@ updateTestRailDetails(){
     console.log(test);
     alert(test.message);
     if(test.status){      
-      this.clearFields();
+      //this.clearFields();
     }
   });
 }

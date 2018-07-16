@@ -230,6 +230,44 @@ h3 {
     margin-top: 0px;
 }
 
+.padding-md {
+    padding: 15px;
+}
+
 .padding-top-md {
-    padding-top: 10px;
+    padding-top: 15px;
+}
+
+mat-list {
+    height: 300px;
+    overflow: auto;
+}
+
+.mat-row {
+    cursor: pointer;
+}
+
+.mat-progress-bar {
+    height: 18px;
+    border-radius: 8px;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.yellow {
+    color: #ecf23a;
+}
+
+.green {
+    color: #11a320;
+}
+
+.label-class {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
 }

@@ -54,6 +54,22 @@
             <mat-header-cell *matHeaderCellDef mat-sort-header> Device IP </mat-header-cell>
             <mat-cell *matCellDef="let device">{{device.deviceIp}} </mat-cell>
         </ng-container>
+        <ng-container matColumnDef="active">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Active </mat-header-cell>
+            <mat-cell *matCellDef="let device">{{device.active}} </mat-cell>
+        </ng-container>
+
+        <!-- <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let device"> {{device.status}} </mat-cell>
+        </ng-container> -->
+
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Check Availability </mat-header-cell>
+            <mat-cell *matCellDef="let device">
+                <button mat-raised-button color="primary" (click)="getDeviceStatus(device)">Check</button>
+            </mat-cell>
+        </ng-container>
 
 
         <!-- <ng-container matColumnDef="deviceDescription">
@@ -63,10 +79,6 @@
 
 
 
-        <ng-container matColumnDef="status">
-            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-            <mat-cell *matCellDef="let device"> {{device.status}} </mat-cell>
-        </ng-container>
 
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -17,7 +17,7 @@ import {DataSource} from '@angular/cdk/collections';
 export class DeviceComponent {
   title=  "Device";
   testData:any;
-  displayedColumns = ['deviceName', 'deviceModel.deviceModel', 'deviceMacId', 'deviceIp','status'];
+  displayedColumns = ['deviceName', 'deviceModel.deviceModel', 'deviceMacId', 'deviceIp', 'active', 'id'];
   //dataSource = new MatTableDataSource<Device>(this.testData);
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
@@ -39,6 +39,14 @@ export class DeviceComponent {
       this.dataSource.paginator = this.paginator;
      console.log(this.testData);
     });
+  }
+  getDeviceStatus(data:any){
+    console.log(data);
+    this.authservice.getDeviceStatus(data).subscribe((value) =>{
+      console.log(value);
+      let data:any = value;
+      alert(data.message);
+    })
   }
 
   // isAllSelected() {

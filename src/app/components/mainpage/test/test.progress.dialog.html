@@ -1,14 +1,24 @@
 <mat-dialog-content>
     <!-- <mat-toolbar color="primary">My App</mat-toolbar> -->
     <mat-toolbar color="primary" class="primary-toolbar">
-        <span>Application Title</span>
+        <span>Test Execution Information</span>
 
         <!-- This fills the remaining space of the current row -->
         <span class="example-fill-remaining-space"></span>
 
-        <span>X</span>
+        <span class="pointer" (click)="closeProgressDialog()">X</span>
     </mat-toolbar>
-    <div class="padding-top-md">
-        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    <div class="padding-md">
+        <!-- {{data|json}} -->
+        <p class="label-class"> <span>{{statusLabel}} ( {{data.executionPercentage}}% is done )</span></p>
+        <mat-progress-bar mode="determinate" value="{{data.executionPercentage}}"></mat-progress-bar>
+        <div class="padding-top-md">
+            <mat-list>
+                <mat-list-item *ngFor="let test of testRunInfoList">
+                    <span *ngIf="test.status=='Initiated'" class="yellow"><mat-icon>fiber_manual_record</mat-icon></span>
+                    <span *ngIf="test.status=='fail'" class="red"><mat-icon>fiber_manual_record</mat-icon></span>
+                    <span *ngIf="test.status=='pass'" class="green"><mat-icon>fiber_manual_record</mat-icon></span> {{test.title}} </mat-list-item>
+            </mat-list>
+        </div>
     </div>
 </mat-dialog-content>

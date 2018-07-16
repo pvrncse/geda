@@ -77,15 +77,30 @@ openDialog(): any {
     this.getTestRun();
   });
 }
-loadProgressDialog(){
+loadProgressDialog(data:any){
   let dialogReference = this.dialog.open(TestProgressComponent, {
-    height: '500px',
+    height: '580px',
     width: '600px',
+    data:data
   });
 
   dialogReference.afterClosed().subscribe(result => {
     console.log('The dialog was closed');
   });
+}
+loadProgressFun(data:any){
+  console.log(data);
+  this.authservice.getTestRunInfo(data).subscribe((value) => {
+    console.log(value);
+    let data:any = value;
+    if(data.status){
+      //this.closeDialog();
+      this.loadProgressDialog(data.data);
+    }else{
+      alert(data.message);
+    }
+    });
+  
 }
 
 
@@ -112,7 +127,6 @@ loadProgressDialog(){
 export class TestComponentDialog implements OnInit {
 
   //getBooks();
-  myData:any;
   enableButton = true;
   listOfTestCases: TreeviewItem[];
   testCaseIds: number[];
@@ -281,8 +295,8 @@ destroyTree(){
   styleUrls: ['./test.component.css']
 })
 export class TestProgressComponent implements OnInit {
-
-  
+  testRunInfoList = [];
+  statusLabel:string;
   constructor(
     
     public dialogReference: MatDialogRef<TestProgressComponent>,
@@ -291,9 +305,18 @@ export class TestProgressComponent implements OnInit {
 DOMImplementation
      }
      
-     ngOnInit() {   
+     ngOnInit() {  
+      console.log(this.data);
+      if(this.data.executionPercentage==100){
+        this.statusLabel = 'Completed..';
+      }else{
+        this.statusLabel = 'In progress..'
+      }
+      this.testRunInfoList = this.data.testRunInfoList;
     }
-
+    closeProgressDialog(){
+      this.dialogReference.close();
+    }
 
 
 }

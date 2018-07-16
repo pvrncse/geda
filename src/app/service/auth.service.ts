@@ -45,6 +45,24 @@ createDeviceModel(data:any){
      return this.http.get(apiUrl, {headers:headers})
 
  } 
+ getDeviceStatus(data:any){
+   console.log(data);
+  let headers = new HttpHeaders().set('Authorization', 'Token '+localStorage.getItem("token"));
+  console.log(headers.get('Authorization'));
+   let apiUrl:string = this.apiAddress+'rest/getDeviceStatus?macId='+data.deviceMacId;
+   return this.http.get(apiUrl, {headers:headers})
+
+} 
+getTestRunInfo(data:any){
+  console.log(data);
+ let headers = new HttpHeaders().set('Authorization', 'Token '+localStorage.getItem("token"));
+ console.log(headers.get('Authorization'));
+  let apiUrl:string = this.apiAddress+'getTestRunInfo?testRunId='+data.id;
+  return this.http.get(apiUrl, {headers:headers})
+
+} 
+
+ 
  getJiraAuthorizedDetail():any{
   let headers = new HttpHeaders().set('Authorization', 'Token '+localStorage.getItem("token"));
   console.log(headers.get('Authorization'));

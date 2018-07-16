@@ -15,7 +15,7 @@
 <!-- content table -->
 
 <div class="example-container mat-elevation-z8">
-    <mat-table #table [dataSource]="dataSource" matSort (click)="loadProgressDialog()">
+    <mat-table #table [dataSource]="dataSource" matSort>
 
         <!-- Checkbox Column -->
         <!-- <ng-container matColumnDef="select">
@@ -36,19 +36,25 @@
         <!-- Name Column -->
         <ng-container matColumnDef="testRunName">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Testexecution Name </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.testRunName}} </mat-cell>
+            <mat-cell *matCellDef="let element">
+                <div (click)="loadProgressFun(element)">{{element.testRunName}} </div>
+            </mat-cell>
         </ng-container>
 
         <!-- Test Case Column -->
         <ng-container matColumnDef="testCaseCount">
             <mat-header-cell *matHeaderCellDef> Testcase Count </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.testCaseCount}} </mat-cell>
+            <mat-cell *matCellDef="let element">
+                <div (click)="loadProgressFun(element)">{{element.testCaseCount}} </div>
+            </mat-cell>
         </ng-container>
 
         <!-- Device Column -->
         <ng-container matColumnDef="deviceCount">
             <mat-header-cell *matHeaderCellDef> Device Count </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.deviceCount}} </mat-cell>
+            <mat-cell *matCellDef="let element">
+                <div (click)="loadProgressFun(element)">{{element.deviceCount}} </div>
+            </mat-cell>
         </ng-container>
 
 

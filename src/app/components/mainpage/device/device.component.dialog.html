@@ -1,0 +1,55 @@
+<mat-dialog-content>
+    <mat-tab-group>
+        <mat-tab label="Device Creation">
+            <mat-form-field id="myForm">
+                <input matInput placeholder="Device Name" [(ngModel)]="deviceName" name="deviceName" required>
+            </mat-form-field>
+            <!-- <ng-select [items]="Device"
+              [virtualScroll]="true"
+              bindLabel="deviceModel"
+              bindValue="id"
+              placeholder="Select Device"
+              [multiple]="false"
+              [(ngModel)]="deviceModel">
+             
+             </ng-select> -->
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <mat-select placeholder="Select Device Model" [(ngModel)]="deviceModel">
+                            <mat-option *ngFor="let device of Device" [value]="device.id">
+                                {{device.deviceModel}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-mini-fab class="addIcon" (click)="openModelDialog()" class="add-for-select">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <mat-form-field>
+                <input matInput placeholder="Device MacId" [(ngModel)]="deviceMacId" name="deviceMacId" required>
+            </mat-form-field>
+
+            <!-- <mat-form-field>
+                <input matInput placeholder="Description" [(ngModel)]="deviceDescription" name="deviceDescription" required>
+            </mat-form-field> -->
+            <div class="btn">
+                <button mat-button class="default" (click)="onNoClick()">Cancel</button>
+                <button mat-button class="primary" (click)="createList()">Create</button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Device Upload">
+            <div class="dashed">
+
+            </div>
+            <div class="btn">
+                <button mat-button class="default" (click)="onNoClick()">Cancel</button>
+                <button mat-button class="primary">Upload</button>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</mat-dialog-content>

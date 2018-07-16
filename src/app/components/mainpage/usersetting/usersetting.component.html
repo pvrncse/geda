@@ -1,0 +1,65 @@
+<!-- <p>
+  usersetting works!
+</p> -->
+<!-- <mat-toolbar>
+    <h2>{{title}}</h2>
+    <div class="btn">
+        <button mat-button routerLink="/mainpage/usersettings/testrail" class="default">Test Rail</button>
+        <button mat-button class="primary">Jira</button>
+        <button mat-button class="primary">Preference</button>
+        </div>
+    </mat-toolbar> -->
+<mat-card>{{title}}
+    <mat-tab-group (selectedTabChange)="tabChanged($event)" [selectedIndex]="selectedIndex">
+        <mat-tab label="Test Rail">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Enter testrail user name" [(ngModel)]="userName" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Enter test rail API key" [(ngModel)]="apiKey" />
+                </mat-form-field>
+                <mat-grid-list cols="2" rowHeight="5:1">
+                    <mat-grid-tile><button mat-button (click)="clearFields()">Cancel</button></mat-grid-tile>
+                    <mat-grid-tile><button mat-raised-button color="primary" (click)="updateTestRailDetails()">Update</button></mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-tab>
+        <mat-tab label="Jira" (click)="testFun()">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Enter access token" [(ngModel)]="accessToken" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Enter request token" [(ngModel)]="requestToken" />
+                </mat-form-field>
+                <mat-grid-list cols="2" rowHeight="5:1">
+                    <mat-grid-tile>&nbsp;</mat-grid-tile>
+                    <mat-grid-tile><button mat-raised-button color="primary" (click)="getAuthorization()">Authorize</button></mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-tab>
+        <mat-tab label="Preferences">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Enter password" [(ngModel)]="oldPassword" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Enter new password" [(ngModel)]="newPassword" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Confirm new password" [(ngModel)]="confirmNewPassword" />
+                </mat-form-field>
+                <mat-grid-list cols="2" rowHeight="5:1">
+                    <mat-grid-tile>&nbsp;</mat-grid-tile>
+                    <mat-grid-tile><button mat-raised-button color="primary" (click)="updatePassword()">Update Password</button></mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</mat-card>
+<!-- <router-outlet></router-outlet> -->

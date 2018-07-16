@@ -1,0 +1,281 @@
+h2 {
+    color: #5d6565;
+    padding: 6px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: #ffffff;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 200px;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+.mat-column-select {
+    overflow: visible;
+}
+
+.mat-header-cell {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #fff;
+}
+
+.mat-header-row {
+    min-height: 42px;
+    color: #ffffff;
+    background-color: #2b90e0;
+}
+
+.mat-row {
+    /* min-height: 42px; */
+    border-bottom-width: 0;
+}
+
+.mat-header-cell.mat-sort-header-sorted {
+    color: #ffffff;
+}
+
+ul.breadcrumb {
+    font-family: sans-serif;
+    margin: -20px;
+    padding: 4px 23px;
+    list-style: none;
+    background-color: rgba(158, 158, 158, 0.28);
+    ;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+mat-row:nth-child(odd) {
+    background-color: rgba(158, 158, 158, 0.28);
+}
+
+mat-row:nth-child(even) {
+    background-color: #fff;
+}
+
+.mat-checkbox-inner-container {
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.mat-row {
+    border-bottom-width: 0;
+}
+
+.mat-table {
+    overflow: hidden !important;
+}
+
+.navbar-left[_ngcontent-c6] {
+    margin-left: 0%;
+}
+
+.mat-icon-button {
+    color: #fff;
+    font-size: inherit;
+    background-color: #0275d8;
+}
+
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+           Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+
+.navbar-right {
+    font-size: 14px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.mat-toolbar {
+    margin-top: 20px;
+    background: #eee;
+}
+
+addIcon {
+    margin-left: 14px;
+}
+
+
+/* .mat-mini-fab[_ngcontent-c19]{
+        margin-left: 14px
+    } */
+
+.mat-form-field {
+    width: 340px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.mat-mini-fab {
+    margin-left: 5px;
+    margin-right: 25px;
+    background-color: #0275d8;
+}
+
+.ng-select {
+    margin-top: 4px;
+}
+
+.btn {
+    margin-left: 58px;
+}
+
+ ::ng-deep .mat-ink-bar {
+    display: none !important
+}
+
+ ::ng-deep.mat-tab-label-active {
+    background-color: #0275d8;
+    color: #fff
+}
+
+ ::ng-deep.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
+    background-color: #0275d8;
+}
+
+ ::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items {
+    max-height: 140px!important;
+}
+
+ ::ng-deep.mat-dialog-container {
+    padding: 0px!important;
+    overflow-x: hidden;
+}
+
+ ::ng-deep.mat-dialog-content {
+    display: inline;
+    margin: 0px;
+    padding: 0%;
+}
+
+ ::ng-deep.mat-tab-body-content {
+    margin-left: 33px;
+}
+
+ ::ng-deep.mat-tab-label {
+    min-width: 200px!important;
+}
+
+.default {
+    border-radius: 0px;
+    font-size: 20px;
+    background-color: #939A9F;
+    color: #fff;
+}
+
+.primary {
+    border-radius: 0px;
+    font-size: 20px;
+    margin-left: 35px;
+    color: #fff;
+    background-color: #0275d8;
+}
+
+.dashed {
+    margin: 10px;
+    width: 86%;
+    height: 200px;
+    border-style: dashed;
+    border-radius: 5px;
+    border-color: #ABA4A4;
+}
+
+:host /deep/ .mat-checkbox-inner-container {
+    height: 15px;
+    width: 15px;
+}
+
+.addDevice {
+    display: inline-flex;
+    margin-left: 1%;
+}
+
+.addDevice.mat-mini-fab[_ngcontent-c19] {
+    margin-left: 14px;
+}
+
+:host /deep/ .ng-select-container {
+    width: 280px!important;
+}
+
+:host /deep/ .ng-dropdown-panel {
+    width: 280px !important;
+}
+
+::ng-deep .mat-tab-label-active {
+    opacity: 1!important
+}
+
+.heading {
+    text-align: center;
+}
+
+.Inputfield {
+    margin-left: 10%;
+    width: 70%;
+}
+
+.primaryModel {
+    border-radius: 0px;
+    font-size: 15px;
+    margin-left: 20%;
+    color: #fff;
+    background-color: #0275d8;
+}
+
+.defaultModel {
+    margin-left: 10%;
+    border-radius: 0px;
+    font-size: 15px;
+    background-color: #939A9F;
+    color: #fff;
+}
+
+.select-for-add {
+    width: 80%;
+}
+
+.add-for-select {
+    width: 40px;
+}

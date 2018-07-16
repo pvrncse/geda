@@ -1,0 +1,33 @@
+h2{
+    color: #5d6565;
+    margin-bottom:5%;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+}
+.mat-toolbar{
+    background :#cbd3d6;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height:100px;
+}
+.btn{
+    margin-left: -13%;
+    margin-top: 6.5%;
+}
+
+.default{
+    color:#fff;
+    border-radius: 0px;
+    font-size: 16px;
+    background-color: #107ace;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }

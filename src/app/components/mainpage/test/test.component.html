@@ -1,0 +1,71 @@
+<ul class="breadcrumb">
+    <li><a routerLink="/mainpage/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li>Test Execution</li>
+</ul>
+<nav>
+
+    <mat-toolbar>
+        <h2>{{title}}</h2>
+        <span class="example-fill-remaining-space"></span>
+        <span><button mat-mini-fab>
+            <mat-icon class="add" (click)="openDialog()">add</mat-icon>
+        </button> Create Test Execution</span>
+    </mat-toolbar>
+</nav>
+<!-- content table -->
+
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort (click)="loadProgressDialog()">
+
+        <!-- Checkbox Column -->
+        <!-- <ng-container matColumnDef="select">
+        <mat-header-cell *matHeaderCellDef>
+          <mat-checkbox (change)="$event ? masterToggle() : null"
+                        [checked]="selection.hasValue() && isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()">
+          </mat-checkbox>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)">
+          </mat-checkbox>
+        </mat-cell>
+      </ng-container> -->
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="testRunName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Testexecution Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.testRunName}} </mat-cell>
+        </ng-container>
+
+        <!-- Test Case Column -->
+        <ng-container matColumnDef="testCaseCount">
+            <mat-header-cell *matHeaderCellDef> Testcase Count </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.testCaseCount}} </mat-cell>
+        </ng-container>
+
+        <!-- Device Column -->
+        <ng-container matColumnDef="deviceCount">
+            <mat-header-cell *matHeaderCellDef> Device Count </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.deviceCount}} </mat-cell>
+        </ng-container>
+
+
+        <!-- status Column -->
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let element"> </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+
+    </mat-table>
+
+    <!--pagination -->
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+    </mat-paginator>
+</div>

@@ -1,0 +1,25 @@
+<!-- <p>
+  login works!
+</p> -->
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+         <h3>Please Login Here</h3>
+        <form class="signin-content">
+         
+                <mat-form-field class="full-width-input">
+                <input matInput placeholder="Username" [(ngModel)]="userName" name="userName" required>
+                </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+            </mat-form-field>
+          
+          <button mat-raised-button color="primary" type="submit" (click)="submit()">Login</button>
+          </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+  

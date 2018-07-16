@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<mat-dialog-content>
+    <h2 class="heading">Create Test Execution</h2>
+
+    <mat-horizontal-stepper #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel matStepperIcon="edit">Enter Name
+                </ng-template>
+
+                <mat-form-field>
+                    <input matInput placeholder="Enter Name" [(ngModel)]="testName" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button class="default_btn" matStepperNext>cancel</button>
+                    <button mat-button class="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="selectedDeviceId">
+
+            <ng-template matStepLabel name="selectedDeviceId">Device</ng-template>
+
+            <ng-select [items]="Device" [virtualScroll]="true" bindLabel="name" bindValue="id" placeholder="Select Device" [multiple]="true" [(ngModel)]="selectedDeviceId">
+            </ng-select>
+            <div>
+                <button mat-button class="default_btn" matStepperPrevious>Back</button>
+                <button mat-button class="primary" matStepperNext>Next</button>
+            </div>
+
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel name="TestCases">Test Cases</ng-template>
+            <ng-select [items]="ProjectList" [virtualScroll]="true" bindLabel="name" bindValue="id" placeholder="Select Project" [(ngModel)]="selectedProjectId" (change)="onChange($event)">
+            </ng-select>
+            <!-- <p>current project {{selectedProjectId}}</p>
+            <p>selected values: {{testCaseIds}}</p> -->
+            <!-- <ngx-dropdown-treeview [config]="config" [items]="listOfTestCases" [buttonClass]="buttonClass" (selectedChange)="testCaseIds = $event" (filterChange)="onFilterChange($event)">
+            </ngx-dropdown-treeview> -->
+            <br/>
+            <ngx-treeview [config]="config" [items]="listOfTestCases" (selectedChange)="testCaseIds = $event" (filterChange)="onFilterChange($event)">
+            </ngx-treeview>
+            <!-- {{testCaseIds}} -->
+            <div>
+                <button mat-button class="default" matStepperPrevious>Back</button>
+                <button mat-button class="primary" (click)="createTest()">Create</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+</mat-dialog-content>

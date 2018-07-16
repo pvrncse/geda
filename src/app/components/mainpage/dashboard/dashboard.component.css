@@ -1,0 +1,131 @@
+.mat-card.card{
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    width: 300px;
+    height: 100px;
+}
+.mat-card{
+padding:5px;
+}
+
+h2{
+    color: #5d6565;
+    padding: 6px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: sans-serif;
+}
+.mat-card.panel{
+    width: 96.75%;
+    margin: 14px 0px 0px 10px;
+}
+
+ul.breadcrumb {
+    font-family: sans-serif;
+  margin: -20px;
+  padding: 4px 23px;
+  list-style: none;
+  background-color: rgba(158, 158, 158, 0.28);
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.mat-grid-tile[_ngcontent-c5][_ngcontent-c5] {
+    left: -11px;
+    width: calc(((50% - 0.5px) * 1) + 0px);
+    margin-top: -1px;
+    top: -3px;
+    padding-top: calc(((37% - 0.5px) * 1) + 0px);
+}
+
+.mat-grid-tile{
+margin-left:-5px;
+top: -5px;
+}
+
+.icon{
+    margin: 0px 0px -18px 1px;
+    height: 74px;
+    width: 80px;
+}
+
+.text mat-grid-tile{
+    margin-top:-35px;
+}
+
+canvas[_ngcontent-c6] {
+    padding: 8px;
+    margin-top: -40px!important;
+    width: 848px!important;
+    height: 400px!important;
+    margin-left: 50px;
+}
+
+.mat-toolbar{
+    margin-top: 20px;
+    background: #eee;
+}
+.mat-card-title{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 65px;
+    font-family: sans-serif;
+}
+
+.mat-card-subtitle{
+    margin-left: -100px;
+    padding: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+   
+}
+.mat-card-subtitle:not(:first-child), .mat-card-title:not(:first-child) {
+   margin-top: 30px;
+}
+@media only screen and (max-width:600px) {
+  .mat-card.card {
+       margin-left:18%!important;
+    }
+}
+.grid{
+    background-color:rgb(43, 173, 144);
+}
+.grid1{
+    color:rgb(43, 173, 144);
+}
+.grid-1{
+ background-color:rgb(24, 103, 187);
+}
+.grid2{
+    color:rgb(24, 103, 187);
+}
+.grid-2{
+    background-color:rgb(87, 89, 90);
+}
+.grid3{
+    color:rgb(87, 89, 90);
+}
+/* @media only screen and (max-width:600px) {
+    .example-container {
+       top:50px;
+    }
+} */

@@ -1,0 +1,54 @@
+
+ <ul class="breadcrumb">
+    <li><a>Dashboard</a></li>
+  </ul>
+  
+  <nav>
+  <mat-toolbar>
+      <h2>{{title}}</h2>
+      </mat-toolbar>
+</nav>
+        
+  <mat-card class="card">
+   <mat-grid-list cols="2" rowHeight="2:1.5">
+      <mat-grid-tile class="grid"><img mat-card-image src="./assets/images/Test-Run.png" class="icon"></mat-grid-tile>
+    <mat-grid-tile class="grid1"><mat-card-title>Test execution</mat-card-title>
+      <mat-card-subtitle class="grid1">567</mat-card-subtitle></mat-grid-tile>
+   </mat-grid-list>
+  </mat-card>
+  <mat-card class="card">
+      <mat-grid-list cols="2" rowHeight="2:1.5">
+         <mat-grid-tile class="grid-1"><img mat-card-image class="icon" src="./assets/images/total.png"></mat-grid-tile>
+         <mat-grid-tile class="grid2"><mat-card-title >Total Test Case</mat-card-title>
+          <mat-card-subtitle class="grid2">567</mat-card-subtitle></mat-grid-tile>
+       
+      </mat-grid-list>
+     </mat-card>
+     <mat-card class="card">
+        <mat-grid-list cols="2" rowHeight="2:1.5">
+           <mat-grid-tile class="grid-2"><img mat-card-image  class="icon" src="./assets/images/Device.png"></mat-grid-tile>
+           <mat-grid-tile class="grid3"><mat-card-title>Total Device</mat-card-title>
+          <mat-card-subtitle class="grid3">567</mat-card-subtitle></mat-grid-tile>
+        </mat-grid-list>
+       </mat-card>
+
+         <!-- text execution graph  -->
+
+       <mat-card class="panel">
+         <h2>Text Execution</h2>
+         <div style="display: block;">
+            <canvas baseChart
+                        [datasets]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+          
+         </div>
+
+       </mat-card>
+  
+     

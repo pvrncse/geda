@@ -1,0 +1,235 @@
+h2 {
+    color: #5d6565;
+    padding: 6px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 200px;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+}
+
+.mat-column-select {
+    overflow: visible;
+}
+
+.mat-header-cell {
+    font-size: 15px;
+    color: #fff;
+}
+
+.mat-header-row {
+    min-height: 42px;
+    color: #fff;
+    background-color: #2b90e0;
+}
+
+.mat-header-cell.mat-sort-header-sorted {
+    color: black;
+}
+
+ul.breadcrumb {
+    font-family: sans-serif;
+    margin: -20px;
+    padding: 4px 23px;
+    list-style: none;
+    background-color: rgba(158, 158, 158, 0.28);
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+mat-row:nth-child(odd) {
+    background-color: rgba(158, 158, 158, 0.28);
+}
+
+mat-row:nth-child(even) {
+    background-color: #fff;
+}
+
+.mat-row {
+    min-height: 42px;
+    border-bottom-width: 0;
+}
+
+.mat-table {
+    overflow: hidden !important;
+}
+
+.navbar-left {
+    margin-left: 47%;
+}
+
+.mat-icon-button {
+    color: #fff;
+    background-color: #0275d8;
+    margin-left: 0px;
+}
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.navbar-right {
+    font-size: 14px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.mat-toolbar {
+    margin-top: 20px;
+    background: #eee;
+}
+
+.mat-toolbar.header {
+    margin: 0px;
+    background-color: #0275d8;
+    color: #fff;
+    width: 104%;
+}
+
+.mat-raised-button {
+    min-width: 40px;
+    border-radius: 50%;
+    line-height: 48px;
+    background-color: #0275d8;
+}
+
+.mat-mini-fab {
+    background-color: #0275d8;
+}
+
+ ::ng-deep.mat-dialog-container {
+    padding: 0px!important;
+    overflow-x: hidden;
+    height: 85%!important;
+}
+
+.mat-form-field {
+    margin-left: 41px;
+    width: 85%;
+}
+
+
+/* ::ng-deep.ng-select-container
+        {
+            width:93%!important;
+        }
+        ::ng-deep.ng-dropdown-panel
+        {
+            width:93%!important;   
+        } */
+
+h4 {
+    font-family: sans-serif;
+    margin-left: 10%;
+}
+
+h3 {
+    margin-left: 30%;
+}
+
+ ::ng-deep.ng-dropdown-panel .ng-dropdown-panel-items {
+    max-height: 160px!important;
+}
+
+.btn {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.heading {
+    font-weight: normal;
+    text-align: center;
+}
+
+.default {
+    margin-top: 10%;
+    border-radius: 0px;
+    font-size: 20px;
+    background-color: #939A9F;
+    color: #fff;
+}
+
+.default_btn {
+    margin-top: 30%;
+    border-radius: 0px;
+    font-size: 20px;
+    background-color: #939A9F;
+    color: #fff;
+}
+
+.primary {
+    margin-left: 60%;
+    border-radius: 0px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #0275d8;
+}
+
+ :host /deep/ .mat-checkbox-inner-container {
+    height: 15px;
+    width: 15px;
+}
+
+.mat-dialog-content {
+    display: inline;
+    margin: 0px;
+    padding: 0%;
+}
+
+ ::ng-deep.dropdown-menu {
+    height: auto;
+    width: 100%!important;
+}
+
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+               Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+
+.mat-toolbar.primary-toolbar {
+    background: #3f51b5;
+    margin-top: 0px;
+}
+
+.padding-top-md {
+    padding-top: 10px;
+}

@@ -1,0 +1,14 @@
+<!-- <mat-toolbar>
+        <h2>{{title}}</h2>
+        </mat-toolbar> -->
+
+<mat-dialog-content>
+    <h3 class="heading">Create Device Model</h3>
+    <mat-tab-group></mat-tab-group>
+
+    <mat-form-field class="Inputfield">
+        <input matInput placeholder="Device Model" [(ngModel)]="deviceModel" name="deviceModel" required>
+    </mat-form-field>
+    <button mat-button class="defaultModel" (click)="onNoClick()">Cancel</button>
+    <button mat-button class="primaryModel" (click)="createDeviceModel()">Create</button>
+</mat-dialog-content>

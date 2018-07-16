@@ -1,0 +1,48 @@
+<!-- <p>
+  mainpage works!
+</p> -->
+<nav class="navbar-header">
+    <mat-toolbar color="primary">
+        <mat-icon class="menuicon" (click)="sidenav.toggle()" *ngIf="visible">menu</mat-icon>
+        <span>DASHBOARD</span>
+        <span class="example-fill-remaining-space"></span>
+
+
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item routerLink="/mainpage/usersettings">User Setting
+                    <!-- <mat-icon  routerLink="/">exit_to_app</mat-icon> -->
+                  </button>
+            <button mat-menu-item routerLink="/login">Logout
+        <!-- <mat-icon  routerLink="/login">exit_to_app</mat-icon> -->
+      </button>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <button mat-button class="navbar-right">Admin</button>
+        <mat-icon class="image">account_circle</mat-icon>
+        </button>
+    </mat-toolbar>
+</nav>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [opened]="innerWidth>600" class="example-sidenav">
+        <mat-list role="list">
+            <mat-list-item routerLink="/mainpage/dashboard" routerLinkActive="active">
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/mainpage/test" routerLinkActive="active">
+                <mat-icon>settings</mat-icon>
+                <span>Test Execution</span></mat-list-item>
+            <mat-list-item routerLink="/mainpage/device" routerLinkActive="active">
+                <mat-icon>desktop_mac</mat-icon>
+                <span>Device</span></mat-list-item>
+            <mat-list-item routerLink="/mainpage/usermanagement" routerLinkActive="active">
+                <mat-icon>perm_identity</mat-icon>
+                <span>User Management</span></mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>

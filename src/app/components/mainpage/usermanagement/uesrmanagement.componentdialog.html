@@ -1,0 +1,30 @@
+<mat-dialog-content>
+
+    <h2>{{title}}</h2>
+    <div class="example-container">
+        <mat-form-field id="myForm">
+            <input matInput placeholder="User Name" [(ngModel)]="newUserData.userName" name="userName" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email Id" [(ngModel)]="newUserData.email" name="emailId" required>
+        </mat-form-field>
+        <mat-form-field>
+            <!-- <input matInput placeholder="Role"  [(ngModel)]="role" name="role" required> -->
+            <!-- <ng-select [items]="RoleList" [virtualScroll]="true" bindLabel="userRole" bindValue="id" placeholder="Select Role" [(ngModel)]="selectedRole" (change)="onChange($event)">
+            </ng-select> -->
+            <mat-select placeholder="Select Role" [(ngModel)]="newUserData.role">
+                <mat-option *ngFor="let role of RoleList" [value]="role.roleId">
+                    {{role.userRole}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Password" [(ngModel)]="newUserData.password" name="Password" required>
+        </mat-form-field>
+        <mat-grid-list cols="2" rowHeight="5:1">
+            <mat-grid-tile><button mat-button (click)="closeDialog()">Cancel</button></mat-grid-tile>
+            <mat-grid-tile><button mat-raised-button color="primary" (click)="createUser(newUserData)">Add</button></mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+</mat-dialog-content>
